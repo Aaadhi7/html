@@ -1,0 +1,82 @@
+.one h1{
+        height: 200px;
+        background-color: red; /* For browsers that do not support gradients */
+        background-image: linear-gradient(red, yellow, green);
+      
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    color: white;
+    
+}
+.two {background-color: black;
+padding: 20px 10px 20px 20px;
+margin-top: -45;
+
+
+
+}
+.al{color: white;
+    text-decoration: none;
+}
+.ds{
+    color: white;
+    padding-left: 10;
+    text-decoration: none;
+}
+.la{
+    color: white;.three h2 
+        color: green;
+        text-decoration: none;
+    
+    padding-left: 10;
+}
+.three {
+    width: 400px;
+    height: 300;
+    margin-left: 100px;
+
+    
+}
+.four{
+    width: 400px;
+    height: 300;
+    margin-left: 700px;
+    margin-top: -320px;
+}
+.five{
+    width: 400px;
+    height: 300;
+  margin-left: 1300px;
+    margin-top: -325px;
+}
+.three h2 {
+    color: green;
+}
+.four h2 {
+    color: green;
+}
+.five h2 {
+    color: green;
+
+}
+h1:hover {background-color: brown;
+color: blanchedalmond;}
+h2:hover{color: aqua;}
+
+
+.two:hover{
+    background-color: blueviolet;
+}
+.al:hover{color: chartreuse;}
+.ds:hover{color: rgb(255, 247, 10);}
+.la:hover{color: rgb(245, 21, 241);}
+.three p:hover{
+    color: rgb(32, 163, 196);
+}
+.four p:hover{
+    color: rgb(173, 125, 65);
+}
+.five p:hover{
+    color: rgb(157, 50, 150);
+}

@@ -1,0 +1,23 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&family=Nabla&display=swap');
+
+  /* font-family: 'Nabla', cursive; */
+  /* font-family: 'Blaka Ink', cursive;
+font-family: 'Nabla', cursive; */
+
+  
+h1{font-family: 'Nabla', cursive; 
+    font-size: 4em;
+    text-align: center;
+}
+p{
+    font-family: 'Blaka Ink', cursive;
+    font-family: 'Nabla', cursive;
+font-size: 2em;}
+img{
+    border-radius: 50%;
+    margin-left: 35+%;
+    width: 600;
+}

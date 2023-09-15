@@ -1,0 +1,21 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+  /* font-family: 'DM Serif Display', serif; */
+.compus{
+    background-image: url(site1.png);
+    height: 600;
+}
+.compus h1{text-align: center;
+width: 300;
+color: white;
+margin-left: 800px;
+font-family: 'DM Serif Display', serif;}
+.compus h6{margin-left: 930;
+padding-top: 100;
+color: white;}
+.compus h3{
+    color: white;
+}
+.compus a {color: white;
+    m
+;}

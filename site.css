@@ -3,12 +3,19 @@
   /* font-family: 'DM Serif Display', serif; */
 .compus{
     background-image: url(site1.png);
+    background: url(site1.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
     height: 600;
 }
 .compus h1{text-align: center;
-width: 300;
+width: 600;
+font-size: 60;
 color: white;
-margin-left: 800px;
+margin-left: 650px;
 font-family: 'DM Serif Display', serif;}
 .compus h6{margin-left: 930;
 padding-top: 100;
@@ -16,6 +23,48 @@ color: white;}
 .compus h3{
     color: white;
 }
-.compus a {color: white;
-    m
-;}
+.home {color: white;
+  margin-left: 65%;
+margin-top: -2%; }
+a{color: white;
+margin-left: 20;
+text-decoration: none;}
+button{margin-left: 47.5%;}
+.second{
+    background-image: url(site2.png);
+    background: url(site2.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: -21;
+    height: 30%;
+}
+.second h4 {color: white;
+padding-top: 20;
+}
+.second p {color: white;}
+.uni { width: 400;
+text-align: center;
+margin-left: 10;
+padding-top: 3%;}
+
+.ser { width: 400;
+text-align: center;
+margin-left: 26%;
+margin-top: -9.5%;
+}
+.dig { width: 400;
+    text-align: center;
+    margin-left: 51%;
+margin-top: -10%;}
+    .br { width: 400;
+        text-align: center;
+        margin-left: 75%;
+    margin-top: -10%;}
+    .dia {width: 25;
+    margin-bottom: -10%;}
+   .pen{width: 30;
+margin-bottom: -10%;}
+.ro{margin-bottom: -15%;}
+.pc{margin-bottom: -10%;}

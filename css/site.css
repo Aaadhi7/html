@@ -2,14 +2,14 @@
   @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
   /* font-family: 'DM Serif Display', serif; */
 .compus{
-    background-image: url(site1.png);
-    background: url(site1.png) no-repeat center center fixed; 
+    background-image: url(../images/site1.png);
+    background: url(../images/site1.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     
-    height: 600;
+    height: 800;
 }
 .compus h1{text-align: center;
 width: 600;
@@ -31,13 +31,13 @@ margin-left: 20;
 text-decoration: none;}
 button{margin-left: 47.5%;}
 .second{
-    background-image: url(site2.png);
-    background: url(site2.png) no-repeat center center fixed; 
+    background-image: url(../images/bg.png);
+    background: url(../images/bg.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-top: -21;
+    margin-top: ;
     height: 30%;
 }
 .second h4 {color: white;
@@ -68,3 +68,15 @@ margin-top: -10%;}
 margin-bottom: -10%;}
 .ro{margin-bottom: -15%;}
 .pc{margin-bottom: -10%;}
+.last{background-image: url(../images/bg4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+   margin-top: width: 30%;
+   -20;
+    height: 90%;
+    padding-top: 6%;
+}
+.last h2{color: white;
+margin-left: 45%;
+font-size: 2.5em;}
+.w{ margin-left: 30;}

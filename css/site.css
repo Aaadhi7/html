@@ -12,24 +12,25 @@
     height: 800;
 }
 .compus h1{text-align: center;
-width: 600;
-font-size: 60;
+width: 1200;
+font-size: 7em;
 color: white;
-margin-left: 650px;
+margin-left: 35%;
 font-family: 'DM Serif Display', serif;}
-.compus h6{margin-left: 930;
-padding-top: 100;
+.compus h6{margin-left: 50%;
+padding-top: 200;font-size: 1.5em;padding-top: 100;
 color: white;}
 .compus h3{
-    color: white;
+    color: white;font-size: 3em;
 }
 .home {color: white;
   margin-left: 65%;
 margin-top: -2%; }
-a{color: white;
-margin-left: 20;
+a{color: white;font-size: 40;
+margin-left: 70; 
 text-decoration: none;}
-button{margin-left: 47.5%;}
+button{margin-left: 47.5%;
+}
 .second{
     background-image: url(../images/bg.png);
     background: url(../images/bg.png) no-repeat center center fixed; 
@@ -37,17 +38,17 @@ button{margin-left: 47.5%;}
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-top: ;
+    background-attachment: fixed;
     height: 30%;
 }
 .second h4 {color: white;
-padding-top: 20;
+padding-top: 20;font-size: 2.5em;margin-left: 6%;
 }
-.second p {color: white;}
-.uni { width: 400;
-text-align: center;
+.second p {color: white; width: 700;font-size: 1.7em;
+    text-align: center;}
+.uni {
 margin-left: 10;
-padding-top: 3%;}
+padding-top: 3%;text-align: ;}
 
 .ser { width: 400;
 text-align: center;
@@ -72,11 +73,25 @@ margin-bottom: -10%;}
     background-size: cover;
     background-repeat: no-repeat;
    margin-top: width: 30%;
-   -20;
     height: 90%;
     padding-top: 6%;
 }
 .last h2{color: white;
-margin-left: 45%;
-font-size: 2.5em;}
-.w{ margin-left: 30;}
+margin-left: 45%;font-size: 100;
+}
+.dia{margin-left: 9%;
+width: 1.5%;}
+.ro{width: 13%;}
+.pc{width: 10%;}
+.pen{width: 10%;}
+.w{margin-left:35%;
+padding-top: 10;}
+.last h4{color: white;font-size: 3em;}
+.last p{color: white;font-size: 2em;}
+.web{width: 20%;text-align: center; margin-left: 10cm;margin-top: 5cm;}
+.digital{width: 20%;text-align: center;margin-left: 40cm;margin-top: -11.5cm;}
+.int{width: 20%; text-align: center; margin-left: 75cm;margin-top: -12.5cm;}
+.para{text-align: center;margin-top: 5cm ;width: 70cm;margin-left: 15cm;}
+.fin{text-align: center;}
+.how{color: white;font-size: 6em;text-align: center;}
+.work{text-align: center;}

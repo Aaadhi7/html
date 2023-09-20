@@ -1,97 +1,140 @@
 
   @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
   /* font-family: 'DM Serif Display', serif; */
+ 
 .compus{
     background-image: url(../images/site1.png);
-    background: url(../images/site1.png) no-repeat center center fixed; 
+    background: url(../images/site1.png) no-repeat center center scroll; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+ 
     
-    height: 800;
+    height: 800px;
 }
 .compus h1{text-align: center;
-width: 1200;
+width: 1200px;
 font-size: 7em;
 color: white;
-margin-left: 35%;
+margin-left: 22%;
 font-family: 'DM Serif Display', serif;}
 .compus h6{margin-left: 50%;
-padding-top: 200;font-size: 1.5em;padding-top: 100;
+padding-top: 200px;font-size: 1.5em;padding-top: 100px;
 color: white;}
 .compus h3{
-    color: white;font-size: 3em;
+    color: white;
 }
 .home {color: white;
   margin-left: 65%;
 margin-top: -2%; }
-a{color: white;font-size: 40;
-margin-left: 70; 
+a{color: white;
+margin-left: 45px; 
 text-decoration: none;}
-button{margin-left: 47.5%;
+button{margin-left: 50%;
 }
 .second{
-    background-image: url(../images/bg.png);
-    background: url(../images/bg.png) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 30%;
+    background: url(../images/bg.png) no-repeat center center scroll; 
+  color: white;
+    background-size: cover; 
+    display: block;
+    text-align: center;
+/* 
+    height: 30%; */
+}
+.one, .two, .three, .four{
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.one p, .two p, .three p, .four p{
+    text-align: justify !important;
+  
 }
 .second h4 {color: white;
-padding-top: 20;font-size: 2.5em;margin-left: 6%;
+padding-top: 20px;margin-left: 6%;
 }
-.second p {color: white; width: 700;font-size: 1.7em;
+.second p {color: white; width: 400px;
     text-align: center;}
-.uni {
-margin-left: 10;
-padding-top: 3%;text-align: ;}
+/* .uni {
+margin-left: 10px;
+padding-top: 3%; 
+}
 
-.ser { width: 400;
+.ser { width: 400px;
 text-align: center;
 margin-left: 26%;
-margin-top: -9.5%;
+margin-top: -10%;
 }
-.dig { width: 400;
+.dig { width: 400px;
     text-align: center;
-    margin-left: 51%;
-margin-top: -10%;}
-    .br { width: 400;
+    margin-left: 51%; */
+   
+
+    /* .br { width: 400px;
         text-align: center;
         margin-left: 75%;
     margin-top: -10%;}
-    .dia {width: 25;
+    .dia {width: 25px;
     margin-bottom: -10%;}
-   .pen{width: 30;
+   .pen{width: 30px;
 margin-bottom: -10%;}
 .ro{margin-bottom: -15%;}
 .pc{margin-bottom: -10%;}
 .last{background-image: url(../images/bg4.png);
     background-size: cover;
     background-repeat: no-repeat;
-   margin-top: width: 30%;
+    background-attachment: fixed;
+
     height: 90%;
     padding-top: 6%;
 }
 .last h2{color: white;
-margin-left: 45%;font-size: 100;
+margin-left: 45%;
 }
 .dia{margin-left: 9%;
 width: 1.5%;}
-.ro{width: 13%;}
-.pc{width: 10%;}
-.pen{width: 10%;}
+
 .w{margin-left:35%;
-padding-top: 10;}
-.last h4{color: white;font-size: 3em;}
-.last p{color: white;font-size: 2em;}
-.web{width: 20%;text-align: center; margin-left: 10cm;margin-top: 5cm;}
-.digital{width: 20%;text-align: center;margin-left: 40cm;margin-top: -11.5cm;}
-.int{width: 20%; text-align: center; margin-left: 75cm;margin-top: -12.5cm;}
-.para{text-align: center;margin-top: 5cm ;width: 70cm;margin-left: 15cm;}
-.fin{text-align: center;}
-.how{color: white;font-size: 6em;text-align: center;}
-.work{text-align: center;}
+padding-top: 10%;}
+.last h4{color: white;}
+.last p{color: white;;}
+.web{width: 20%;text-align: center;margin-left: 10%;}
+.digital{text-align: center;margin-left: 10px;margin-top: -20%;}
+
+.para{text-align: center;padding-top: 2px;width: 50%;margin-left: 22%;} */
+.web , .digital , .int {
+    display: inline-block;
+    width: 20%;
+    margin-left: 10%;
+    padding-top: 10%;
+    text-align: center;
+   
+   color: white;
+}
+.web p, .digital p, .int p {text-align: justify;
+}
+.last{background-image: url(../images/bg4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+margin-top: -39px;}
+    .{ color: white;}
+    .para{color: white;
+        text-align: center;
+        width: 50%;
+        margin-left: 25%;
+    padding-top: 2%;}
+    .last h2{color: white;}
+    .w{text-align: center;
+    font-size: 2em;
+padding-top: 5%;}
+    .last h2{text-align: center;
+    font-size: 3em;
+padding-top:10% ;}
+.how  {text-align: center;
+color: white;font-size: 3em;
+padding-top: 50px;}
+.lp{text-align: center;
+color: white;
+padding-bottom: 50px;}

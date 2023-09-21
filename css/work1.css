@@ -1,0 +1,15 @@
+.one h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+}
+.one p{
+    text-align: center;
+    border: 10px double black;
+    padding: 50px;
+ 
+}
+.two h1 {text-align: center;
+margin-top: 30px;}
+img{padding: 100px 50px ;}

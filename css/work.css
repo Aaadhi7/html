@@ -1,0 +1,88 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+  /* font-family: 'Mooli', sans-serif; */
+  /* font-family: 'Quicksand', sans-serif; */
+  /* font-family: 'Italianno', cursive; */
+.top{background-image: url(../images/top.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.top h2{font-family: 'Italianno', cursive;
+    color: rgb(232, 232, 56);
+    font-size: 60px;
+text-align: center;}
+.top h1{ text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+font-size: 60px;
+margin-top: -60px;}
+.head{padding-top: 10%;}
+.beef{width: 100px;
+height: 100px;
+border-radius: 50px;}
+.one ,.two,.three,.four{width: 250px;
+    display: inline-block;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    padding-bottom: 70px;
+color: white;
+text-align: center;}
+one{display: inline-block;}
+.mid {width: 700px;
+margin-top: 100px;
+margin-left: 100px;
+margin-bottom: 30px;}
+
+.beef1{width: 100px;
+height: 100px;
+border-radius: 50px;}
+.mid1{display: inline-block;
+    padding-top: 80px;
+text-align: center;
+width: 150px;
+
+margin-right: 60px;}
+.mid h2{width: 170px;}
+a{text-decoration: none;
+background-color: red;
+color: white;
+margin-left: 100px;
+
+}
+.side {
+    margin-left: 50%;
+    margin-top: -25%;
+    width: 50%;
+    height: 56%;
+}
+.lst{display: inline-block ;}
+.spec{ height: 200px;
+width: 200px;}
+.chic{display: inline-block;
+
+margin-right: 50px;
+text-align: center;}
+.last{width: 800px;
+    padding-top: 100px;
+margin-left: 100PX;
+margin-top: 50px;}
+
+.ab{font-family: 'Italianno', cursive;
+
+color: rgb(157, 43, 43);
+font-size: 40px;
+margin-bottom: -40px;
+}
+.last p{text-align: justify;
+}
+.fin {
+    width: 500px;
+    margin-left: 55%;
+    margin-top: -35%;
+    height: 70%;
+}

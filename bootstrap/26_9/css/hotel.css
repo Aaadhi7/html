@@ -1,0 +1,8 @@
+img{width: 100%;}
+.bg{
+    background-image: url(../images/img6.png);
+    background-size: cover;
+    height: 700px;
+}
+.wood{width: 20%;}
+.bg h1 {width: 700px;text-align: center;}

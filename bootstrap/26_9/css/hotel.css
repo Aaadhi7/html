@@ -5,4 +5,35 @@ img{width: 100%;}
     height: 700px;
 }
 .wood{width: 20%;}
-.bg h1 {width: 700px;text-align: center;}
+.bg h1 {text-align: center;
+margin-top: 90px;}
+
+
+a{padding-left: 10px;}
+.r1{margin-top: 10px;}
+ 
+.wel{color: orange;
+}
+.come{color: green;}
+.cen{margin-top: 50px;
+margin-bottom: 50px;
+;}
+.para{text-align: justify;}
+
+
+.cou img{height: 220px;}
+.our{background-image: url(../images/img5.png);
+background-size: cover;
+height: 500PX;}
+.bg1{background-color: orange ;
+    
+height: 500px;}
+.bg1 h1,.bg1 p{margin-top: 50PX;
+text-align: justify;}
+.last{background-image: url(../images/img4.png);
+}
+.lst{background-color: rgb(160, 221, 70);
+ padding: 150px 10px 150px 200px;
+}
+.last h1,.last p{color: whitesmoke;}
+

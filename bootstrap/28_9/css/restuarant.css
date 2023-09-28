@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+  /* font-family: 'Mooli', sans-serif; */
+  /* font-family: 'Quicksand', sans-serif; */
+  /* font-family: 'Italianno', cursive; */
+  .feli{font-family: 'Italianno', cursive;
+font-size: 75px;
+margin-top: 50px;
+color: rgb(200, 200, 0);}
+img{width: 100%;}
+.c1 img{border-radius: 500px;
+height:120px;
+width: 120px;}
+.one{background-image: url(/images/top.png);}
+.best{color: white;
+font-size: 60px;
+padding-bottom: 30px;
+font-family: 'Mooli', sans-serif;
+}
+.c1{color: white;}
+.r2 img{height: 120px;
+width: 120px;
+border-radius: 100px;}
+.tw{margin-left:;}

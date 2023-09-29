@@ -1,0 +1,17 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+  /* font-family: 'Amatic SC', cursive; */
+  img{width: 100%;}
+  .one {background-image: url(/images/cof1.png);
+background-size: cover;}
+.one h1{font-family: 'Amatic SC', cursive;}
+.c1{margin-top: 200px;
+padding-bottom: 200px;
+padding-right: 200px;}
+.head{color: yellow;}
+.btn{color: yellow;
+}
+.one p, .one h1{color: white;
+}
+.one h1{font-size: 80px;}
+ 

@@ -21,7 +21,15 @@ padding-bottom: 30px;
 font-family: 'Mooli', sans-serif;
 }
 .c1{color: white;}
-.r2 img{height: 120px;
+.r2 img {height: 120px;
 width: 120px;
 border-radius: 100px;}
-.tw{margin-left:;}
+.r1{padding-left: 100px;}
+.side {padding-top: 50px;}
+.three img{height;}
+.r3{margin-top: 100px;
+padding-left: 100px;}
+.three p {width: 700px;
+text-align: justify;}
+.three h1{font-family: 'Italianno', cursive;
+color: red;}

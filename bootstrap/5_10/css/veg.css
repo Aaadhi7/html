@@ -1,0 +1,13 @@
+
+ img{width: 100%}
+ @import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@1&display=swap');
+/* font-family: 'Sorts Mill Goudy', serif; */
+.one {background-color: gray;
+border-radius: 50%;
+width: 100px;
+height: 100px;
+padding: 30px;
+}
+.one:hover
+{
+    background-color: bisque;}

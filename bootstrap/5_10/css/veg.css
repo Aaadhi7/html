@@ -11,3 +11,31 @@ padding: 30px;
 .one:hover
 {
     background-color: bisque;}
+.sec a{text-decoration: none;
+background-color: rgb(86, 137, 8);
+color: white;
+font-size: 20px;
+margin-top: -10%;
+}
+.juc{height: 36%;}
+.veg2{height: 77%;}
+.fruit{background-image: url(../images/staw.png);
+height: 300px;
+background-size: cover;}
+.veg{background-image: url(../images/veg1.png);
+    background-size: cover;
+height: 300px;}
+.shop{background-image: url(../images/veg3.png);
+    background-size: cover;
+}
+.shop h2{font-style: italic;
+color: rgb(130, 188, 42);}
+.sec .btn{ background-color: rgb(106, 149, 41);}
+.dry{background-image: url(../images/dry.png);
+    background-size: cover;
+height: 300px;}
+.jucice{background-image: url(../images/juc.png);
+    background-size: cover;
+height: 300px;}
+.con{padding-top: 30px;}
+.sec p{color: gray;}

@@ -4,6 +4,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
         <link rel="stylesheet" href="../css/veg.css">
         <title>bootstrap</title>
     </head>
@@ -79,7 +80,7 @@
             
 
         </div> -->
-        <div class="container sec">
+        <div class="container sec mt-5">
 
 
             <div class="row">
@@ -97,7 +98,7 @@
                         <div class="col-lg ">
                         <div class="fruit  d-flex align-items-end">
                         
-                            <div class="vegg" >
+                            <div class="vegg " >
                             <a href="">FRUITS</a></div>
                         </div>
 
@@ -105,7 +106,7 @@
 
                     </div>
 
-                    <div class="row "> 
+                    <div class="row mt-3"> 
                         <div class="col-lg ">
                         <div class="veg  d-flex align-items-end ">
                    
@@ -129,9 +130,9 @@
                         </div>
 
                     </div>
-                    <div class="row ">
+                    <div class="row mt-3 ">
                         
-                    <div class="col-lg">
+                    <div class="col-lg ">
                         <div class="dry d-flex align-items-end">
                         <a href="">DRIED</a>
                         </div>
@@ -157,10 +158,196 @@
         </div>
 
 
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center p-3">
+                    <div class="border p-2">
+                         <img src="../images/p1.png" alt="">
+                  <div class="p1">
+                    <h5>BELL PEPPER</h5>
+                    <span>$80.00</span>
+
+
+                  </div>
+                    </div>
+                 
+
+                </div>
+                 <div class="col-lg-3 col-md-6 text-center p-3">
+                    <div class="border p-2">
+                        <img src="../images/p2.png" alt="">
+                  <div class="p2">
+                    <h5>STAWBERRY</h5>
+                    <span>$80.00</span>
+
+
+                  </div>
+                    </div>
+                  
+
+
+                </div>
+                <div class="col-lg-3 col-md-6 text-center p-3">
+                   <div class="border p-2">
+                    <img src="../images/p3.png" alt="">
+                    <div class="p3">
+                        <h5>GREEN BEANS</h5>
+                        <span>$120.00</span>
+    
+    
+                      </div>
+                    </div>
+    
+  
+                  </div>
+                  <div class="col-lg-3 col-md-6 text-center p-3">
+                    <div class="border p-2">
+                    <img src="../images/p4.png" alt="">
+                    <div class="p4">
+                        <h5>PURPLE CABBAGE</h5>
+                        <span>$120.00</span>
+    
+                    </div>
+                      </div>
+    
+  
+                  </div>
+                  <div class="row ">
+                    <div class="col-lg-3 col-md-6 text-center p-3">
+                        <div class="border p-2">
+                        <img src="../images/p5.png" alt="">
+                        <div class="p5">
+                            <h5>TOMATOE</h5>
+                            <span>$120.00</span>
+                        </div>
+        
+        
+                          </div>
+        
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center p-3">
+                        <div class="border p-2">
+                        <img src="../images/p6.png" alt="">
+                        <div class="p6">
+                            <h5>BROCOLI</h5>
+                            <span>$120.00</span>
+                        </div>
+        
+        
+                          </div>
+        
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center p-3">
+                        <div class="border p-2">
+                        <img src="../images/p7.png" alt="">
+                        <div class="p7">
+                            <h5>CARROT</h5>
+                            <span>$120.00</span>
+                        </div>
+        
+        
+                          </div>
+        
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center p-3">
+                        <div class="border p-2">
+                        <img src="../images/p8.png" alt="">
+                        <div class="p8">
+                            <h5>FRUIT JUICE</h5>
+                            <span>$120.00</span>
+                        </div>
+        
+        
+                          </div>
+        
+                    </div>
+                  </div>
+                  
+                  
+            </div>
+        </div>
+
+
+        <div class="container-fluid five ">
+            <div class="row justify-content-end">
+                <div class="col-lg-6 mt-5 pt-5 pb-5">
+                    <h6 class="green pb-3">Best Price For You</h6>
+                    <h1 class="pb-5">Deal of the day</h1>
+                    <p>Far far away,behind the word mountains,far from the countries Voklia and Consonantia </p>
+                    <h3 class="green pb-5">Spinach</h3>
+                    <span>$10</span><span class="green">now $5 only</span>
+
+
+                    <div id="countdown">
+                        <ul>
+                          <li><span id="days"></span>days</li>
+                          <li><span id="hours"></span>Hours</li>
+                          <li><span id="minutes"></span>Minutes</li>
+                          <li><span id="seconds"></span>Seconds</li>
+                        </ul>
+                      </div>
+
+                </div>
+            </div>
+        </div>
+
+
       
         
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src=""></script>
+        <script>
+
+
+            (function () {
+                const second = 1000,
+                      minute = second * 60,
+                      hour = minute * 60,
+                      day = hour * 24;
+              
+                //I'm adding this section so I don't have to keep updating this pen every year :-)
+                //remove this if you don't need it
+                let today = new Date(),
+                    dd = String(today.getDate()).padStart(2, "0"),
+                    mm = String(today.getMonth() + 1).padStart(2, "0"),
+                    yyyy = today.getFullYear(),
+                    nextYear = yyyy + 1,
+                    dayMonth = "09/30/",
+                    birthday = dayMonth + yyyy;
+                
+                today = mm + "/" + dd + "/" + yyyy;
+                if (today > birthday) {
+                  birthday = dayMonth + nextYear;
+                }
+                //end
+                
+                const countDown = new Date(birthday).getTime(),
+                    x = setInterval(function() {    
+              
+                      const now = new Date().getTime(),
+                            distance = countDown - now;
+              
+                      document.getElementById("days").innerText = Math.floor(distance / (day)),
+                        document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                        document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                        document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+              
+                      //do something later when date is reached
+                      if (distance < 0) {
+                        document.getElementById("headline").innerText = "It's my birthday!";
+                        document.getElementById("countdown").style.display = "none";
+                        document.getElementById("content").style.display = "block";
+                        clearInterval(x);
+                      }
+                      //seconds
+                    }, 0)
+                }());
+        </script>
+
+
+
+
     </body>
 </html>

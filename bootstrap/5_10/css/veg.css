@@ -43,3 +43,36 @@ height: 300px;}
 font-style: italic;}
 .third{margin-top: 100px;}
 .sec .btn :hover{background: none;}
+.five{background-image: url(../images/bg3.webp);}
+.five .green{color: rgb(86, 137, 8);
+font-style: italic;}
+.five{margin-top: 100px;}
+
+
+
+ 
+#countdown li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+  
+ #countdown li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+  
+  
+  
+  @media all and (max-width: 768px) {
+   
+   #countdown li {
+      font-size: calc(1.125rem * var(--smaller));
+    }
+    
+   #countdown li span {
+      font-size: calc(3.375rem * var(--smaller));
+    }
+  }

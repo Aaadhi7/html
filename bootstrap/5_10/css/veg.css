@@ -39,7 +39,7 @@ height: 300px;}
 height: 300px;}   
 .sec .btn :hover{background: none;}
 .five{background-image: url(../images/bg3.webp);}
-.five .green{color: rgb(86, 137, 8);
+.green{color: rgb(86, 137, 8);
 font-style: italic;}
 .five{margin-top: 100px;}
 
@@ -76,3 +76,5 @@ font-style: italic;}
   .six {margin-top: 100px;}
   .nave .white{color: white;}
   .nave{background-color:  rgb(86, 137, 8);}
+ 
+.vegfood{color: rgb(86, 137, 8) ;}

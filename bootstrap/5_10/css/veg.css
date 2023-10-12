@@ -1,5 +1,8 @@
 
  img{width: 100%}
+
+  @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
  @import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@1&display=swap');
 /* font-family: 'Sorts Mill Goudy', serif; */
 .one {background-color: gray;
@@ -78,3 +81,27 @@ font-style: italic;}
   .nave{background-color:  rgb(86, 137, 8);}
  
 .vegfood{color: rgb(86, 137, 8) ;}
+.bg{background-image: url(../images/bg_2.webp);
+background-size: cover;
+margin-bottom: 30px;
+height: 650px;}
+.fru{
+padding-top: 100px;
+font-family: 'Amatic SC', sans-serif;
+font-size: 150px;
+color: white;}
+.bg h2 {font-size: 22px;
+color: white;}
+.bg .btn{background-color: rgb(86, 137, 8) ;}
+.btn :hover {
+  background: none;
+  
+}
+.lst img {border-radius: 100%;
+height: 100px;
+width: 100px;}
+.lst p{
+  padding: 30px;
+  
+}
+.bor { border-left: 3px solid rgb(18, 17, 17);;}

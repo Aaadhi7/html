@@ -87,16 +87,10 @@ margin-bottom: 30px;
 height: 650px;}
 .fru{
 padding-top: 100px;
-font-family: 'Amatic SC', sans-serif;
+
 font-size: 150px;
 color: white;}
-.bg h2 {font-size: 22px;
-color: white;}
-.bg .btn{background-color: rgb(86, 137, 8) ;}
-.btn :hover {
-  background: none;
-  
-}
+
 .lst img {border-radius: 100%;
 height: 100px;
 width: 100px;}
@@ -105,3 +99,14 @@ width: 100px;}
   
 }
 .bor { border-left: 3px solid rgb(18, 17, 17);;}
+.vegges{font-family: 'Amatic SC', sans-serif;
+
+color: white;
+font-size: 150px;}
+.foods{color: white;}
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+ top:10rem;
+}

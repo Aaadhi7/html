@@ -98,11 +98,12 @@ width: 100px;}
   padding: 30px;
   
 }
-.bor { border-left: 3px solid rgb(18, 17, 17);;}
-.vegges{font-family: 'Amatic SC', sans-serif;
+.bor { border-left: 3px solid rgb(18, 17, 17);}
+.carousel-caption h1 {font-family: 'Amatic SC', sans-serif;
 
 color: white;
 font-size: 150px;}
+.carousel-caption{ top:120px;}
 .foods{color: white;}
 
 
@@ -112,12 +113,6 @@ font-size: 150px;}
   margin-top: 30px;
 }
 
-.gtco-testimonials h2 {
-    font-size: 30px;
-    text-align: center;
-    color: #333333;
-    margin-bottom: 50px;
-  }
 
   .owl-stage-outer {
     padding: 30px 0;
@@ -161,7 +156,7 @@ font-size: 150px;}
     border-radius: 20px;
     border: 0;
   }
-  .vegges{margin-top: -100px;}
+
 
     .card-img-top { 
       border-radius: 50%;
@@ -190,7 +185,7 @@ font-size: 150px;}
  
 
   .active {
-    opacity: 0.5;
+    
     transition: all 0.3s;
   }
 
@@ -212,23 +207,6 @@ font-size: 150px;}
     }
  
 
-@media (max-width: 767px) {
-  .gtco-testimonials {
-    margin-top: 20px;
-  }
-}
-
-.owl-carousel {
-  .owl-nav button {
-    &.owl-next, &.owl-prev {
-      outline: 0;
-    }
-  }
-
-  button.owl-dot {
-    outline: 0;
-  }
-}
 .email{background-color: wheat;}
 .sub{background-color:  rgb(86, 137, 8);
 }
@@ -263,3 +241,41 @@ left: 0;
 }
 .abs {background-color: rgb(86, 137, 8);
 color: white;}
+
+
+
+
+.owl-carousel {
+  .owl-nav button {
+    &.owl-next, &.owl-prev {
+      outline: 0;
+    }
+  }
+
+  button.owl-dot {
+    outline: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .gtco-testimonials {
+    margin-top: 20px;
+  }
+}
+
+.owl-carousel {
+  .owl-nav button {
+    &.owl-next, &.owl-prev {
+      outline: 0;
+    }
+  }
+
+  button.owl-dot {
+    outline: 0;
+  }
+}
+@media (max-width: 767px) {
+  .gtco-testimonials {
+    margin-top: 20px;
+  }
+}

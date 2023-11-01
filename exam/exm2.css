@@ -1,0 +1,9 @@
+img{width: 100%;
+}
+.r2 img{border-radius: 100%;}
+@media (min-width:768px) and (max-width:988px){
+.r2 img{width: 150px;}
+}
+@media (min-width:320px) and (max-width:767px){
+    .r2 img{width: 150px;}
+    }

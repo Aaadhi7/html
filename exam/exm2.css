@@ -4,6 +4,8 @@ img{width: 100%;
 @media (min-width:768px) and (max-width:988px){
 .r2 img{width: 150px;}
 }
-@media (min-width:320px) and (max-width:767px){
+@media (min-width:100px) and (max-width:767px){
     .r2 img{width: 150px;}
+   h2, p  {text-align: center;}
+  
     }

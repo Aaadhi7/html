@@ -1,0 +1,19 @@
+*{margin: 0;
+padding: 0;
+
+box-sizing: border-box;}
+
+
+.container{display: grid;
+    margin: auto;}
+.images{
+   grid-template-rows: auto auto auto auto;
+    align-content: space-evenly;
+
+
+
+}
+
+.vedio{display: flex;
+width: max-content;
+margin: auto;}

@@ -5,15 +5,27 @@ box-sizing: border-box;}
 
 
 .container{display: grid;
-    margin: auto;}
-.images{
-   grid-template-rows: auto auto auto auto;
-    align-content: space-evenly;
+ 
+grid-template-areas: 'logo logo logo logo' 'vedio vedio vedio vedio' 'img img1 img2 img3';}
+
+.alen{ grid-area: logo;}
+.vedio{grid-area: vedio;}
+.img1{grid-area: img;}
+.img2{grid-area: img1;}
+.img3{grid-area: img2;}
+.img4{grid-area: img3;}
+
+@media (max-width:786.98px){
+    .container{
+        grid-template-areas: 'logo logo ' ' vedio vedio' 'img img1' 'img2 img3';}
+    }
+    @media (max-width:460.98px){
+        .container{grid-template-areas: 'logo ' ' vedio ' 'img ' 'img1' 'img2' 'img3';
+       
+    }
+    img{align-content: center;}
+    }
 
 
 
-}
 
-.vedio{display: flex;
-width: max-content;
-margin: auto;}

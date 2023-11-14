@@ -15,15 +15,17 @@ grid-template-areas: 'logo logo logo logo' 'vedio vedio vedio vedio' 'img img1 i
 .img3{grid-area: img2;}
 .img4{grid-area: img3;}
 
+
 @media (max-width:786.98px){
     .container{
         grid-template-areas: 'logo logo ' ' vedio vedio' 'img img1' 'img2 img3';}
+        img{margin: auto;}
     }
     @media (max-width:460.98px){
         .container{grid-template-areas: 'logo ' ' vedio ' 'img ' 'img1' 'img2' 'img3';
        
     }
-    img{align-content: center;}
+    img{margin: auto;}
     }
 
 

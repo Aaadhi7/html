@@ -58,62 +58,62 @@
 // }else {
 //     console.log(`num2 : ${num2} is greater`);
 // }
-let day = 1;
-switch (day) {
-    case 1 :
-    console.log("monday");
-    break;
+// let day = 1;
+// switch (day) {
+//     case 1 :
+//     console.log("monday");
+//     break;
 
-    case 2 :
-    console.log("tuesday");
-    break
-    case 3 :
-    console.log("wednesday");
-    break;
-    case 4 :
-    console.log("thursday");
-    break;
+//     case 2 :
+//     console.log("tuesday");
+//     break
+//     case 3 :
+//     console.log("wednesday");
+//     break;
+//     case 4 :
+//     console.log("thursday");
+//     break;
 
-    case 5 :
-    console.log("friday");
-    break;
-    case 6 :
-    console.log("saturday");
-    break;
-    case 7 :
-    console.log("sunday");
-    break;
+//     case 5 :
+//     console.log("friday");
+//     break;
+//     case 6 :
+//     console.log("saturday");
+//     break;
+//     case 7 :
+//     console.log("sunday");
+//     break;
  
-    default :
-    console.log("invalid date")
-    break;
-}
+//     default :
+//     console.log("invalid date")
+//     break;
+// }
 
- for(var i= 0;i < 10 ;i++) {
-    console.log(i+1);
- }
+//  for(var i= 0;i < 10 ;i++) {
+//     console.log(i+1);
+//  }
 
  
 
-while(i<=10) {
-    console.log("hello from while loop");
-    i = i+1;
-}
+// while(i<=10) {
+//     console.log("hello from while loop");
+//     i = i+1;
+// }
 
-do {
-    console.log("hello from do while");
-    i = i+1;
+// do {
+//     console.log("hello from do while");
+//     i = i+1;
 
-}while (i<10);
+// }while (i<10);
 
-for (let i = 0; i<= 10; i++) {
-    if (i==5) {
-        continue;
+// for (let i = 0; i<= 10; i++) {
+//     if (i==5) {
+//         continue;
 
-    }
+//     }
 
-    if (i == 8){
-        break;
-    }
-    console.log(i)
-}
+//     if (i == 8){
+//         break;
+//     }
+//     console.log(i)
+// }

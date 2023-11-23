@@ -17,8 +17,8 @@ let num = "10";
 let doubled = num * 2;
 console.log(doubled);
 
-let colors = ["red","green","blue,"];
-let favoriteColor = colors[3];
+let colors = ["red","green","blue"];
+let favoriteColor = colors[2];
 console.log(favoriteColor);
 
 function add(x,y){
@@ -26,12 +26,13 @@ function add(x,y){
 
 }
 
-let result = add(5);
+let result = add(5,7);
 console.log(result);
 
 let person = {
     firstName: "john",
     lastName:"Doe",
+    age
 };
 
 console.log(person.age);

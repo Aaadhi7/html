@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>playstation</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="sony">
+        
+    </div>
+    <div class="first">
+        <body>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="logo" src ="./images/images (1).jpeg" alt=""> </a>
+        
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" style="color: black;" aria-current="page" href="#">PS5 </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style="color: black;" href="#">PS4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: black;" href="#">Service</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" style="color: black;" href="#">Accessories</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" style="color: black;" href="#">News</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" style="color: black;" href="#">Stores</a>
+                      </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" style="color: black;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        support
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" style="color: black;" href="#"><i class="fa-solid fa-user-group"></i> Friends Updates</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" style="color: black;" href="#"><i class="fa-solid fa-calendar"></i> Events near you</a>
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a class="dropdown-item" style="color: black;" href="#"><i class="fa-solid fa-ticket"></i> Buy a Ticket</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <!--         <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li> -->
+                  </ul>
+                  <form class="d-flex" role="search">
+                    <button type="button" class="btn btn-primary">Signin</button>
+                    <input class="form-control me-2" style="color: black;" type="search" placeholder="Search" aria-label="Search" />
+                  
+                  </form>
+                </div>
+              </div>
+            </nav>
+
+            <div class="container">
+              <div class="w3-content" style="max-width:1200px">
+                <img class="mySlides" src="/images/call-of-duty.webp" style="width:100%">
+                <img class="mySlides" src="/images/spider-man-2.webp" style="width:100%">
+                <img class="mySlides" src="/images/fortnite-og-hero-desktop-01-en-07nov23.jpeg" style="width:100%">
+              
+                <div class="w3-row-padding w3-section">
+                  <div class="w3-col s4">
+                    <img class="demo w3-opacity" src="img_nature_wide.jpg"
+                    style="width:100%" onclick="currentDiv(1)">
+                  </div>
+                  <div class="w3-col s4">
+                    <img class="demo w3-opacity" src="img_snow_wide.jpg"
+                    style="width:100%;display:none" onclick="currentDiv(2)">
+                  </div>
+                  <div class="w3-col s4">
+                    <img class="demo w3-opacity" src="img_mountains_wide.jpg"
+                    style="width:100%;display:none" onclick="currentDiv(3)">
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            
+            <script src="./main.js"></script>
+            <script><script>
+              function currentDiv(n) {
+                showDivs(slideIndex = n);
+              }
+              
+              function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+                }
+                x[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " w3-opacity-off";
+              }
+              </script><script>
+                function currentDiv(n) {
+                  showDivs(slideIndex = n);
+                }
+                
+                function showDivs(n) {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("demo");
+                  if (n > x.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = x.length}
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+                  }
+                  x[slideIndex-1].style.display = "block";
+                  dots[slideIndex-1].className += " w3-opacity-off";
+                }
+                </script>
+          </body>
+        
+    </div>
+</body>
+</html>

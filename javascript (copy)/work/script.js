@@ -1,12 +1,12 @@
 let x=10;
 const y= 20;
-var z;
+var z; // correction : declaring variable z
 x = y + z;
-console.log(x);
+console.log(x); //value consoled
 
 
 let greeting = "Hello";
-if (greeting =="Hello"){
+if (greeting =="Hello"){ //comparative operater changed
     console.log("Hi!");
 }else {
     console.log("Goodbye!");
@@ -17,7 +17,7 @@ let num = "10";
 let doubled = num * 2;
 console.log(doubled);
 
-let colors = ["red","green","blue"];
+let colors = ["red","green","blue","white"]; //added new color
 let favoriteColor = colors[2];
 console.log(favoriteColor);
 
@@ -26,13 +26,13 @@ function add(x,y){
 
 }
 
-let result = add(5,7);
+let result = add(5,7); //added the value of y
 console.log(result);
 
 let person = {
     firstName: "john",
     lastName:"Doe",
-    age
+    age :'18' //age added
 };
 
 console.log(person.age);

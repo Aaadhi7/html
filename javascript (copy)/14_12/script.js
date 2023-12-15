@@ -74,3 +74,52 @@ console.log(result15);
 
 const regexp16 = /goat.*$/i; // here it matches goat,goats,goatsss,....
 const result16 = regexp16.test(str3);// since due to '*' multiple character are matched
+
+
+
+
+//15-12-23
+
+
+const regexinp =/^[a-z][a-z0-9_]/i;
+
+function checkresult  (value){
+    const result = regexinp.test(value);
+    if(result){
+       return'valid string'
+    }else{
+        return'invalid string'
+    }
+}
+const value = "adfeu3 _f"
+
+let check_result = checkresult(value);
+console.log("result :",check_result);
+
+
+function onchange(arg){
+    let validation_result = checkresult(arg.value);
+    let label = document.getElementById('error');
+    if(validation_result){
+        label.innerHTML = validation_result;
+
+    }else{
+        label.innerHTML = validation_result;
+    }
+}
+
+
+
+//string replace using regular expression
+let str5= "a-b-c-d";
+
+let replacedstring1 = str5.replace(/-/,':');//replace first '-' with ':'
+console.log("replacedstring1 : ",replacedstring1);
+
+
+let replacedstring2 = str5.replace(/-/,':');//replace all '-' with ':'
+console.log("replacedstring2 : ",replacedstring2);
+  
+let dateStr = '12-10-04' ;
+let dateStrReplaced = dateStr.replace(/(\d{2})$/,'20$1');// gets '04' from datastr and replace it as '2004' $1 will get the value of the first capture group ie within '()' brackets
+console.log("datastrreplaced :",dateStrReplaced);

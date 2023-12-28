@@ -1,0 +1,26 @@
+*{margin: 0;
+padding: 0;
+}
+img{width: 100%;}
+
+.icon{
+ font-size: 25px;
+
+
+}
+.shopper h1{
+   
+   font-size: 30px;
+
+
+font-family: 'Comfortaa', sans-serif;
+;}
+    
+.navbar{margin: auto;}
+
+.bg{
+   background-image: url(./images/hero_1.jpg.webp);
+
+
+   background-size: cover;
+}

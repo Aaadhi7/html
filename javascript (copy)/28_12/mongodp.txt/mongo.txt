@@ -1,0 +1,15 @@
+mongo - open a connectopn to the local mongodb instance
+show dbs - show all databases 
+use db_name - create and switch to the databases
+db - print current database
+db.dropDatabase - delete the current database
+
+show collections - show all collections in database
+db.createCollection("users") - create a collection with name users
+
+
+CRUD - create read update delete
+
+//create 
+db.users.insertOne({name : "Rahul"}) // create a new document inside the 'users' collection
+db.users.insertMany({name : "Rahul"},{name : "kyle"}) // create multiple new document inside the 'users' collection

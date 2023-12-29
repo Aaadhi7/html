@@ -13,3 +13,20 @@ CRUD - create read update delete
 //create 
 db.users.insertOne({name : "Rahul"}) // create a new document inside the 'users' collection
 db.users.insertMany({name : "Rahul"},{name : "kyle"}) // create multiple new document inside the 'users' collection
+
+{
+    name : "abs",
+    age : "21",
+}
+
+dp.user.insertOne({firstname : "jhon",lastname : "kong",email : "jhon@gmail.com,salary :"30000",DOB :new Date("mar 24,2011"),skill:["Angular","react","mongoDB"],adress: {street:"upper street",house :"no 1",city:"newyork"}})
+
+
+
+/read
+
+
+db.users.find(<filter object>) // find that matches the filter object
+db.users.find({age:32})
+
+db.users.find(<>)

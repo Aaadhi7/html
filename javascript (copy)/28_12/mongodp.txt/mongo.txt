@@ -30,3 +30,31 @@ db.users.find(<filter object>) // find that matches the filter object
 db.users.find({age:32})
 
 db.users.find(<>)
+
+db.users.find({age : {$gt : 12}}) //get all the users whose age is greater than 12
+db.users.find({age : {$gte : 12}}) //get all the users whose age is greater than 12
+db.users.find({age : {lt : 12}}) //get all the users whose age is less than 12
+db.users.find({age : {$lte : 12}}) //get all the users whose age is greater than 12 and equal to 12
+db.users.find({$in : ["riya","jhon"]}) //get all the users whose name of "riya" and "jhon"
+db.users.find({$nin : ["riya","jhon"]}) //get all the users that does not have the name of "riya" and "jhon"
+db.users.find({$and : [{name:"riya"},{age :"10"}]}) //get all the users with name of "riya" and age"10"
+db.users.find({$or : [{name:"riya"},{age :"10"}]}) //get all the users with name of "riya" or age"10"
+db.users.find({name :{$not :{ $eq:"riya"}}}) //get all the users with name other than "riya" 
+db.users .find({age : {exists : true}}) //get all the users having an age field
+db.users.find({$expr : {$gt ["$age","min_age"]}}) //gets all the users having their age greater than min_age
+
+
+
+/Aditional update object
+
+db.users.updateOne({age :15},{$set : {name : "hi"}})//update the name of the first users with age of 15 to the value of hi
+db.users.updateOne({age :15}, {$inc : {age :5}}) // add  5 to the age of first users with age of 15 
+db.users.updateMany({},{rename : {age : "years"}}) //renames the field age to years of all the users
+db.users.updateMany({age : 15},{$unset : {age :""}}) //remove the age field from the first user with age of 15
+db.users.updateMany({$push : {socialmedia : "instagram"}}) //add "instagram" to the "socialmedia" array for all users
+db.users.updateMany({$pull : {socialmedia : "instagram"}}) //remove "instagram" to the "socialmedia" array for all users
+
+
+/read modifier 
+
+db.users.find().sort({name : 1 , age: -1}) //get all the users sorted by name in alphabatic order abd if any name are the same sort bt age in reverse order

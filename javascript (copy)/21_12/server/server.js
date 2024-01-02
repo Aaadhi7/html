@@ -5,7 +5,16 @@ const port = 3000;
 const url = require('url');
 const fs = require('fs');
 const queryString = require('querystring');
+const { error } = require('console');
+const {MongoClient}= require('mongodb');
+
+const client = new MongoClient("mongodb://127.0.0.1:27017");
+
 const server = http.createServer((req, res) => {
+
+  //acess the database and collections
+  const db =  client.db ('ums');
+  const collection = db.collection("users");
  
   //Get the req url
   const reqUrl = req.url;
@@ -15,7 +24,6 @@ const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(reqUrl);
   console.log("parsedUrl : ",parsedUrl);
 
-  //if url path is '/' server html
 
 if(parsedUrl.pathname == '/'){
   res.writeHead(200,{'content-Type' : 'text/html'});
@@ -36,7 +44,7 @@ if(req.method === 'POST' && parsedUrl.pathname === '/submit'){
   });
 
 //process the form data on end of request
-req.on('end',()=> {
+req.on('end',async()=> {
   console.log("body :",body);
   const formData = queryString.parse(body);
   console.log('forData :', formData);
@@ -48,10 +56,22 @@ lname : ${formData.lname},
 email : ${formData.email},
 password : ${formData.pass}
 uname : ${formData.uname},
+age : ${formData.age},
 adress : ${formData.add},
-phoneno : ${formData.phn}`)
-});
+phoneno : ${formData.phn}`);
 
+
+//save to database
+//insert the data into collection
+await collection.insertOne(formData)
+.then((message)=> {
+  console.log("Document inserted succesfully",message);
+
+})
+.catch((error)=>{
+  console.log("database iserted error :",error.message?error.message:error)
+})
+});
 //send a response
 res.writeHead(200,{'Content-Type' : 'text/plain'});
 res.end("form data submitted successfully!");
@@ -59,6 +79,22 @@ res.end("form data submitted successfully!");
 }
 
 });
-server.listen(port, () => {
-  console.log(`server running at http://localhost:3000`);
-});
+
+async function connect(){
+  await client.connect()
+  .then((messge)=>{
+    console.log("Database connection established");
+
+  })
+  .catch((error)=>{
+    console.log("Database error :",error.message?error.message:error);
+  })
+  .finally(()=>{
+    server.listen(port,()=>{
+      console.log(`server running at http://localhost:3000`)
+    })
+  });
+}
+
+connect();
+

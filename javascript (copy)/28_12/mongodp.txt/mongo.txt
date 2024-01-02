@@ -58,3 +58,6 @@ db.users.updateMany({$pull : {socialmedia : "instagram"}}) //remove "instagram" 
 /read modifier 
 
 db.users.find().sort({name : 1 , age: -1}) //get all the users sorted by name in alphabatic order abd if any name are the same sort bt age in reverse order
+db.users.find().limit(2) //only return the first 2 users
+db.users.find().skip(2) //skip the first 2 users when returning the result
+

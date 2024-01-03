@@ -1,5 +1,6 @@
 *{margin: 0;
 padding: 0;
+box-sizing: border-box;
 }
 img{width: 100%;}
 
@@ -16,11 +17,25 @@ img{width: 100%;}
 font-family: 'Comfortaa', sans-serif;
 ;}
     
-.navbar{margin: auto;}
+.navbar{justify-content: center;}
 
 .bg{
    background-image: url(./images/hero_1.jpg.webp);
 
-
+height: 700px;
    background-size: cover;
 }
+.tex .bi {
+   color: rgb(121, 113, 234);
+font-size: 40px;
+margin-top: -5px;
+
+}
+.tex{font-family: 'Comfortaa', sans-serif;}
+.navbar{justify-content: center;
+
+   font-family: 'Comfortaa', sans-serif;
+font-size: 16px;}
+.para{
+   color: rgb(121, 113, 234);}
+   .grey{color: gray;}

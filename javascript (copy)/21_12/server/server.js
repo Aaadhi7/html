@@ -24,10 +24,14 @@ const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(reqUrl);
   console.log("parsedUrl : ",parsedUrl);
 
-
+//if url path is '/' (rootpath) server html
 if(parsedUrl.pathname == '/'){
   res.writeHead(200,{'content-Type' : 'text/html'});
   res.end(fs.readFileSync('../client/index.html'))
+
+}else if(parsedUrl.pathname === '/style.css'){
+  res.writeHead(200, {"content-Type" : 'text/css'});
+  res.end(fs.readFileSync('../client/style.css'))
 
 }
 

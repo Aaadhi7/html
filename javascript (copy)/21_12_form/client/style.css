@@ -16,3 +16,8 @@ border: 1px black solid;
 background-color: violet;
 margin-left: 750px;
 }
+
+table ,th , tbody{
+    border: solid 2px black;
+ border-collapse: collapse ;
+}

@@ -10,7 +10,7 @@ const {MongoClient}= require('mongodb');
 
 const client = new MongoClient("mongodb://127.0.0.1:27017");
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async(req, res) => {
 
   //acess the database and collections
   const db =  client.db ('ums');
@@ -29,11 +29,27 @@ if(parsedUrl.pathname == '/'){
   res.writeHead(200,{'content-Type' : 'text/html'});
   res.end(fs.readFileSync('../client/index.html'))
 
-}else if(parsedUrl.pathname === '/style.css'){
+}else if(parsedUrl.pathname === '/add_user.html'){
+  res.writeHead(200, {"content-Type" : 'text/html'});
+  res.end(fs.readFileSync('../client/add_user.html'))
+
+}
+else if(parsedUrl.pathname === '/get_user.html'){
+  res.writeHead(200, {"content-Type" : 'text/html'});
+  res.end(fs.readFileSync('../client/get_user.html'))
+
+}
+else if(parsedUrl.pathname === '/style.css'){
   res.writeHead(200, {"content-Type" : 'text/css'});
   res.end(fs.readFileSync('../client/style.css'))
 
 }
+else if(parsedUrl.pathname === '/script.js'){
+  res.writeHead(200, {"content-Type" : 'text/javascript'});
+  res.end(fs.readFileSync('../client/script.js'))
+
+}
+
 
 //handle from submission on POST Rrequest to /submit
 if(req.method === 'POST' && parsedUrl.pathname === '/submit'){
@@ -84,10 +100,24 @@ res.end("form data submitted successfully!");
 
 }
 
+
+
+if (req.method == 'GET' && parsedUrl.pathname ==='/getData'){
+  const formData = collection.find();
+  console.log("formData :",formData);
+
+  const formDataArr = await formData.toArray();
+  console.log("formDataArr :",formDataArr);
+
+  let jsonFormData = JSON.stringify(formDataArr);
+  console.log("jsonFormData : ",jsonFormData);
+
+  res.writeHead(200,{"content-Type" : "text/json"});
+  res.end(jsonFormData);
+
+}
+
 });
-
-if (req.methode == 'GET'&& parsedUrl)
-
 async function connect(){
   await client.connect()
   .then((messge)=>{

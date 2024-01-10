@@ -103,6 +103,7 @@ res.end("form data submitted successfully!");
 
 
 if (req.method == 'GET' && parsedUrl.pathname ==='/getData'){
+  console.log("reachedHere")
   const formData = collection.find();
   console.log("formData :",formData);
 
@@ -118,6 +119,8 @@ if (req.method == 'GET' && parsedUrl.pathname ==='/getData'){
 }
 
 });
+
+
 async function connect(){
   await client.connect()
   .then((messge)=>{

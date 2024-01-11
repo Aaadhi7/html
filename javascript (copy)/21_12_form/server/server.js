@@ -6,7 +6,7 @@ const url = require('url');
 const fs = require('fs');
 const queryString = require('querystring');
 const { error } = require('console');
-const {MongoClient}= require('mongodb');
+const {MongoClient,ObjectId}= require('mongodb');
 
 const client = new MongoClient("mongodb://127.0.0.1:27017");
 
@@ -103,7 +103,7 @@ res.end("form data submitted successfully!");
 
 
 if (req.method == 'GET' && parsedUrl.pathname ==='/getData'){
-  console.log("reachedHere")
+  // console.log("reachedHere")
   const formData = collection.find();
   console.log("formData :",formData);
 
@@ -113,9 +113,61 @@ if (req.method == 'GET' && parsedUrl.pathname ==='/getData'){
   let jsonFormData = JSON.stringify(formDataArr);
   console.log("jsonFormData : ",jsonFormData);
 
-  res.writeHead(200,{"content-Type" : "text/json"});
+  res.writeHead(200,{'content-Type' : 'text/json'});
   res.end(jsonFormData);
 
+}
+
+
+if(req.method === "PUT" && parsedUrl.pathname === '/editData'){
+  let body = "";
+  req.on('data',(chunks)=>{
+    console.log("chunks : " ,chunks);
+    body = body + chunks.toString();
+    console.log("body : ",body);
+
+  });
+
+  req.on('end',async()=> {
+    let data = JSON.parse(body);
+
+    let finalData = {
+      fname : data.fname,
+      lname : data.fname,
+      uname : data.uname,
+      email : data.email,
+      pass : data.pass,
+      age : data.age,
+      add : data.add,
+      phn : data.phn,
+
+    }
+    console.log("data : ",data);
+
+    let id = data.id ;
+    console.log("id :",id);
+    console.log("typeof(id) :",typeof(id));
+
+    let _id = new ObjectId(id);
+    console.log("_id",_id);
+    console.log("typeof(_id) :" ,typeof(_id) );
+
+
+    await collection.updateOne({_id},{$set  : finalData})
+     .then((message)=> {
+      console.log("message : ", message);
+      res.writeHead(200,{"content-Type" : "text/plain"});
+      res.end("succes");
+
+     })
+     .catch((error)=>{
+      console.log("erorr :",error);
+      res.writeHead(400,{"content-Type" : "text/plain"});
+      res.end("failed");
+      
+
+     }) 
+  })
 }
 
 });

@@ -91,7 +91,7 @@ await collection.insertOne(formData)
 
 })
 .catch((error)=>{
-  console.log("database iserted error :",error.message?error.message:error)
+  console.log("database inserted error :",error.message?error.message:error)
 })
 });
 //send a response
@@ -120,6 +120,7 @@ if (req.method == 'GET' && parsedUrl.pathname ==='/getData'){
 
 
 if(req.method === "PUT" && parsedUrl.pathname === '/editData'){
+  console.log("reachedHere");
   let body = "";
   req.on('data',(chunks)=>{
     console.log("chunks : " ,chunks);
@@ -156,13 +157,13 @@ if(req.method === "PUT" && parsedUrl.pathname === '/editData'){
     await collection.updateOne({_id},{$set  : finalData})
      .then((message)=> {
       console.log("message : ", message);
-      res.writeHead(200,{"content-Type" : "text/plain"});
-      res.end("succes");
+      res.writeHead(200,{"Content-Type" : "text/plain"});
+      res.end("success");
 
      })
      .catch((error)=>{
       console.log("erorr :",error);
-      res.writeHead(400,{"content-Type" : "text/plain"});
+      res.writeHead(400,{"Content-Type" : "text/plain"});
       res.end("failed");
       
 
@@ -170,6 +171,58 @@ if(req.method === "PUT" && parsedUrl.pathname === '/editData'){
   })
 }
 
+
+if(req.method === "DELETE" && parsedUrl.pathname === '/deleteData'){
+  console.log("reachedHere");
+  let body = "";
+  req.on('data',(chunks)=>{
+    console.log("chunks : " ,chunks);
+    body = body + chunks.toString();
+    console.log("body : ",body);
+
+  });
+
+  req.on('end',async()=> {
+    let data = JSON.parse(body);
+
+    let finalData = {
+      fname : data.fname,
+      lname : data.fname,
+      uname : data.uname,
+      email : data.email,
+      pass : data.pass,
+      age : data.age,
+      add : data.add,
+      phn : data.phn,
+
+    }
+    console.log("data : ",data);
+
+    let id = data.id ;
+    console.log("id :",id);
+    console.log("typeof(id) :",typeof(id));
+
+    let _id = new ObjectId(id);
+    console.log("_id",_id);
+    console.log("typeof(_id) :" ,typeof(_id) );
+
+
+    await collection.deleteOne({_id},{$set  : finalData})
+     .then((message)=> {
+      console.log("message : ", message);
+      res.writeHead(200,{"Content-Type" : "text/plain"});
+      res.end("success");
+
+     })
+     .catch((error)=>{
+      console.log("erorr :",error);
+      res.writeHead(400,{"Content-Type" : "text/plain"});
+      res.end("failed");
+      
+
+     }) 
+  })
+}
 });
 
 

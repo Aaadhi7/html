@@ -13,7 +13,7 @@ const client = new MongoClient("mongodb://127.0.0.1:27017");
 const server = http.createServer(async(req, res) => {
 
 
-  const db =  client.db ('ums');
+  const db =  client.db ('todo');
   const collection = db.collection("users");
  
 

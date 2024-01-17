@@ -83,7 +83,7 @@ async function handleSave(id) {
     let jsonData = JSON.stringify(data);
     console.log("jsonData :", jsonData);
 
-    let response = await fetch('http://localhost:3000/editData', {
+    let response = await fetch('/editData', {
         method: "PUT",
         header: {
             "Content-Type ": "application/json",

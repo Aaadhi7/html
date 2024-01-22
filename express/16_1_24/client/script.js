@@ -1,7 +1,7 @@
 async function getData() {
     console.log("hello world");
 
-    let data = await fetch('http://localhost:3000/getData');
+    let data = await fetch('/getData');
     console.log("data :", data);
 
     let parsedData = await data.json();
@@ -57,7 +57,7 @@ async function handleSave(id) {
 
     let dateTag = document.getElementById(`date-${id}`);
     let date = dateTag.value;
-    console.log("date :" ,date);
+    
 
     let timeTag = document.getElementById(`time-${id}`);
     let time = timeTag.value;
@@ -140,7 +140,7 @@ async function handleDelete(id) {
     let jsonData = JSON.stringify(data);
     console.log("jsonData :", jsonData);
 
-    let response = await fetch('http://localhost:3000/deleteData', {
+    let response = await fetch('/deleteData', {
         method: "DELETE",
         header: {
             "Content-Type ": "application/json",

@@ -1,163 +1,143 @@
-async function getData() {
-    console.log("hello world");
+async function getData(){
 
-    let data = await fetch('/getData');
-    console.log("data :", data);
+    let data =await fetch('http://localhost:5000/getData');
+    console.log("data : ",data);
 
     let parsedData = await data.json();
-    console.log("parsedData : ", parsedData);
+    console.log("parsedData : ",parsedData);
 
     let content = document.getElementById("content");
-    console.log("content :", content);
+    console.log("content : ",content);
 
-    let rows = "";
+    let rows ="";
 
-    for (let i = 0; i < parsedData.length; i++) {
-        rows = rows + `
+    for(let i =0 ;i<parsedData.length; i++){
+        rows = rows+`
         <tr>
         <td>${parsedData[i]._id}</td>
-        <td><input type= "text" name = "date" id="date-${parsedData[i]._id}" value="${parsedData[i].date}" disabled = true></td>
-        <td><input type= "text" name = "time" id="time-${parsedData[i]._id}" value="${parsedData[i].time}" disabled = true></td>
-        <td><input type= "text" name = "tasks" id="tasks-${parsedData[i]._id}" value="${parsedData[i].tasks}" disabled = true></td>
-        <td><input type= "text" name = "top" id="top-${parsedData[i]._id}" value="${parsedData[i].top}" disabled = true></td>
-    
-       
+        <td><input type="date" date ="date" id="date-${parsedData[i]._id}" value="${parsedData[i].date}" disabled = true></td>
+        <td><input type="time" date ="time" id="time-${parsedData[i]._id}" value = "${parsedData[i].time}" disabled = true></td>
+        <td><input type="text" date ="task" id="task-${parsedData[i]._id}" value = "${parsedData[i].task}" disabled = true></td>
+        <td><input type="text" date ="top" id="top-${parsedData[i]._id}" value = "${parsedData[i].top}" disabled = true></td>
         <td><button onClick="handleEdit('${parsedData[i]._id}')">EDIT</button></td>
         <td><button onClick="handleSave('${parsedData[i]._id}')">SAVE</button></td>
         <td><button onClick="handleDelete('${parsedData[i]._id}')">DELETE</button></td>
-  
-        </tr>`
+        </tr>
+        `
     }
-    content.innerHTML = rows;
 
+    content.innerHTML = rows;
 }
+
 getData();
 
-function handleEdit(id) {
-    console.log("id :", id);
+function handleEdit(id){
 
-    let date = document.getElementById(`date-${id}`);
-    date.disabled = false;
 
-    let time = document.getElementById(`time-${id}`);
-    time.disabled = false;
+    let date =document.getElementById(`date-${id}`);
+    date.disabled =false;
 
-    let tasks = document.getElementById(`tasks-${id}`);
-    tasks.disabled = false;
+    let time =document.getElementById(`time-${id}`);
+    time.disabled =false;
 
-    let top = document.getElementById(`top-${id}`);
-    top.disabled = false;
+    let task =document.getElementById(`task-${id}`);
+    task.disabled =false;
 
+    let top =document.getElementById(`top-${id}`);
+    top.disabled =false;
 }
 
-async function handleSave(id) {
-
-    console.log("id :", id);
 
 
-    let dateTag = document.getElementById(`date-${id}`);
+async function handleSave(id){
+
+
+    let dateTag =document.getElementById(`date-${id}`);
     let date = dateTag.value;
+
+    let timeTag =document.getElementById(`time-${id}`);
+    let time = timeTag.value;
+
+    let taskTag =document.getElementById(`task-${id}`);
+    let task = taskTag.value;
+
+    let topTag =document.getElementById(`top-${id}`);
+    let top = topTag.value;
+
+    let data ={
+        id,
+        date,
+        time,
+        task,
+        top,
+    }
+
+    let jsonData =JSON.stringify(data);
     
-
-    let timeTag = document.getElementById(`time-${id}`);
-    let time = timeTag.value;
-
-    let tasksTag = document.getElementById(`tasks-${id}`);
-    let tasks = tasksTag.value;
-
-
-    let topTag = document.getElementById(`top-${id}`);
-    let top = topTag.value;
-
-
-
-    let data = {
-        id,
-        date,
-        time,
-        tasks,
-        top,
-      
-    }
-
-    let jsonData = JSON.stringify(data);
-    console.log("jsonData :", jsonData);
-
-    let response = await fetch('/editData', {
-        method: "PUT",
-        header: {
-            "Content-Type ": "application/json",
+    let response = await fetch('/editData',{
+        method : "PUT",
+        header : {
+            "Content-Type" : "applictaion/json",
         },
         body : jsonData,
     });
 
-    console.log("response : ", response);
-
     let parsed_response = await response.text();
-    console.log("parsed_response : ", parsed_response);
+    console.log("parsed_response : ",parsed_response);
 
     if (parsed_response == "success") {
-        alert("updation success");
-
-    } else {
+        getData();
+        alert ("updation success");
+    }else {
         alert("updation failed");
-
     }
+
+
+    
 }
 
-async function handleDelete(id) {
 
-    console.log("id :", id);
+async function handleDelete(id){
 
-
-    let dateTag = document.getElementById(`date-${id}`);
+    let dateTag =document.getElementById(`date-${id}`);
     let date = dateTag.value;
-    console.log("date :" ,date);
 
-    let timeTag = document.getElementById(`time-${id}`);
+    let timeTag =document.getElementById(`time-${id}`);
     let time = timeTag.value;
 
-    let tasksTag = document.getElementById(`tasks-${id}`);
-    let tasks = tasksTag.value;
+    let taskTag =document.getElementById(`task-${id}`);
+    let task = taskTag.value;
 
-
-    let topTag = document.getElementById(`top-${id}`);
+    let topTag =document.getElementById(`top-${id}`);
     let top = topTag.value;
 
-
-
-
-
-    let data = {
+    let data ={
         id,
         date,
         time,
-        tasks,
+        task,
         top,
-      
+
     }
 
-    let jsonData = JSON.stringify(data);
-    console.log("jsonData :", jsonData);
-
-    let response = await fetch('/deleteData', {
-        method: "DELETE",
-        header: {
-            "Content-Type ": "application/json",
+    let jsonData =JSON.stringify(data);
+    
+    let response = await fetch('/deleteData',{
+        method : "DELETE",
+        headers : {
+            "Content-Type": "application/json",
         },
         body : jsonData,
     });
 
-    console.log("response : ", response);
+    getData();
 
     let parsed_response = await response.text();
-    console.log("parsed_response : ", parsed_response);
 
-    if (parsed_response == "success") {
-        alert("deletion success");
+    if(parsed_response == "success") {
 
+        alert("Deletion Successful");
     } else {
-        alert("deletion failed");
-
+        alert("Deletion Failed");
     }
 }

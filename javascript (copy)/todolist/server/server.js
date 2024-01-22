@@ -127,7 +127,7 @@ if(req.method === "PUT" && parsedUrl.pathname === '/editData'){
     let finalData = {
       date : data.date,
       time : data.date,
-      uname : data.uname,
+      
       tasks : data.tasks,
       top : data.top,
     

@@ -1,3 +1,5 @@
+
+
 async function getData(){
 
     let data =await fetch('http://localhost:5000/getData');
@@ -76,7 +78,7 @@ async function handleSave(id){
     
     let response = await fetch('/editData',{
         method : "PUT",
-        header : {
+        headers : {
             "Content-Type" : "applictaion/json",
         },
         body : jsonData,

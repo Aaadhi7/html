@@ -48,7 +48,7 @@ app.get('/getData', async (req, res) => {
 
 });
 
-app.put('/editData', async (req, res) => {
+app.put('/editData', async (req,res) => {
 
   let data = req.body;
 
@@ -64,7 +64,7 @@ app.put('/editData', async (req, res) => {
 
   let _id = new ObjectId(id);
 
-  await collection.updateOne({ _id }, { $set: finalData })
+  await collection.updateOne({ _id },{ $set: finalData })
     .then((message) => {
       res.writeHead(200, { "Content-Type": "text/plain" });
       res.end("success");
@@ -76,7 +76,7 @@ app.put('/editData', async (req, res) => {
 
 });
 
-app.delete('/deleteData', async (req, res) => {
+app.delete('/deleteData', async (req,res) => {
 
   let data = req.body;
 

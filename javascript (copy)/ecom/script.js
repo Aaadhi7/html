@@ -1,6 +1,10 @@
+
+let http = new XMLHttpRequest();
+http.open('get','https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap',true);
 const mostPopPorducts = document.querySelector(".most-popular-products");
 
 const jsonFile = "./products.json";
+
 
 fetch(jsonFile)
 	.then((respone) => {

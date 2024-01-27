@@ -17,10 +17,10 @@ async function getData(){
         rows = rows+`
         <tr>
         <td>${parsedData[i]._id}</td>
-        <td><input type="date" date ="date" id="date-${parsedData[i]._id}" value="${parsedData[i].date}" disabled = true></td>
-        <td><input type="time" date ="time" id="time-${parsedData[i]._id}" value = "${parsedData[i].time}" disabled = true></td>
-        <td><input type="text" date ="task" id="task-${parsedData[i]._id}" value = "${parsedData[i].task}" disabled = true></td>
-        <td><input type="text" date ="top" id="top-${parsedData[i]._id}" value = "${parsedData[i].top}" disabled = true></td>
+        <td><input type="date" name="date" id="date-${parsedData[i]._id}" value="${parsedData[i].date}" disabled = true></td>
+        <td><input type="time" name ="time" id="time-${parsedData[i]._id}" value = "${parsedData[i].time}" disabled = true></td>
+        <td><input type="text" name ="task" id="task-${parsedData[i]._id}" value = "${parsedData[i].task}" disabled = true></td>
+        <td><input type="text" name ="top" id="top-${parsedData[i]._id}" value = "${parsedData[i].top}" disabled = true></td>
         <td><button onClick="handleEdit('${parsedData[i]._id}')">EDIT</button></td>
         <td><button onClick="handleSave('${parsedData[i]._id}')">SAVE</button></td>
         <td><button onClick="handleDelete('${parsedData[i]._id}')">DELETE</button></td>

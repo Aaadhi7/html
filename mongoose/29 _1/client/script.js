@@ -29,7 +29,7 @@ async function submitForm() {
 
 
 
-    let response = await fetch('/submit', {
+    let response = await fetch('http://192.168.150.131/submit', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -272,7 +272,7 @@ function validatePassword() {
 
     const password_error = document.getElementById(`password-error`);
 
-    const password_regex = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+    const password_regex =/^[a-zA-Z0-9!@#$%^&*]{6,16}$/;;
 
     let passwordvalid = password_regex.test(password);
     console.log("passwordvalid:", passwordvalid);

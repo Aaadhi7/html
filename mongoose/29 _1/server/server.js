@@ -3,6 +3,13 @@ const app = express();
 const dotenv = require('dotenv');
 
 dotenv.config();
+
+//cors
+// app.use(cors());
+
+//client
+app.use(express.static(__dirname + "/../client"))
+
 const connect = require('./db/config');
 const userRoutes = require('./routes/userRoutes');
 app.use(express.json());

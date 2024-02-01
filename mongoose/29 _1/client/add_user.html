@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <form action="/submit" method="post"> -->
+        <form  id="forms" onsubmit=" return validate()">
+
+    <div id="name-section" class="section">
+    <input id="name" name="name" type="text" placeholder="First Name" onkeyup="validateName()">
+    <div id="name-error" class="error"></div>
+
+</div>
+
+
+<div id="email-section" class="section">
+
+<input id="email" type="email" name="email" placeholder="Email Address"  onkeyup="validateEmail()">
+<div id="email-error" class="error"></div>
+
+</div>
+ 
+
+<div id="password-section" class="section">
+
+<input id="password" type="password" name="password" placeholder="Password" onkeyup="validatePassword()">
+<div id="password-error" class="error"></div>
+
+</div> 
+
+
+   <button id="button" type="submit" onclick="submitForm()">submit</button>
+
+</form>
+
+<script src="script.js"></script>
+</body>
+
+</html>

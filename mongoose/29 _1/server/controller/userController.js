@@ -60,7 +60,15 @@ async function createUser(req, res) {
 
 }
 
-async function getUserData() {
+async function getUserData(req,res) {
+    try {
+        const datas = req.body;
+
+    
+        
+    } catch (error) {
+        
+    }
 
 }
 

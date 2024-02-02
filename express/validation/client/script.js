@@ -26,6 +26,12 @@ async function submitForm() {
         alert("please enter a value")
         return false
     }
+    else{
+        if(name !== validateName.isNamevalid || email !== validateEmail.Emailvalid || password !== validatePassword.passwordvalid){
+            alert("please enter a required value")
+            return false
+        }
+    }
 
 
 
@@ -287,4 +293,7 @@ function validatePassword() {
     }
 
 
+
 }
+
+

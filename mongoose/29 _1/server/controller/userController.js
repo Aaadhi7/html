@@ -1,10 +1,13 @@
 const users = require('../db/models/users');
 const  sucess_function  = require('../utils/response-handler').sucess_function;
 const  error_function= require('../utils/response-handler').error_function;
-
+const bcrypt = require('bcrypt');
 async function createUser(req, res) {
     try {
-        const datas = req.body;
+        const datas = req.body
+        const name = req.body.name;
+        const email = req.body.email;
+        const password = req.body.passsword;
 
         //validation
 
@@ -19,13 +22,32 @@ async function createUser(req, res) {
             res.status(response.statusCode).send(response);
             return;
         }
+        //Hashing password
+
+        let salt =  await bcrypt.genSalt(10);
+        console.log("salt :",salt);
+
+        let hashed_password = bcrypt.hashSync( password , salt);
+        console.log("hashed_password :",hashed_password);
+
+        
 
         //save to database
         
 
-        let new_user = await users.create(datas);
+        let new_user = await users.create({
+            name,
+            email,
+            password : hashed_password,
+        });
 
         if (new_user) {
+
+            let response_datas = {
+                _id :new_user._id,
+                name : new_user.name,
+                email : new_user.email,
+            }
             console.log("new_user : ",new_user);
             let response = sucess_function({
                 statusCode : 201,

@@ -13,12 +13,12 @@ async function submitForm() {
     const password = document.getElementById('password').value
     console.log("password:", password);
 
-    let data = {
+    let datas = {
         name,
         email,
         password,
     }
-    let json_data = JSON.stringify(data);
+    let json_data = JSON.stringify(datas);
 
 
 
@@ -60,8 +60,8 @@ async function getData() {
 
 
 
-    let data = await fetch('/getData');
-    console.log("data:", data)
+    let datas = await fetch('/getData');
+    console.log("data:", datas)
 
 
     let parsedData = await data.json();
@@ -125,14 +125,14 @@ async function handleSave(id) {
     let password = passTag.value;
     console.log("pass : ", password);
 
-    let data = {
+    let datas = {
         id,
         name,
         email,
         password,
     }
 
-    let jsonData = JSON.stringify(data);
+    let jsonData = JSON.stringify(datas);
     console.log("jsonData : ", jsonData);
 
     let response = await fetch('/editData', {
@@ -175,14 +175,14 @@ async function handleDelete(id) {
     let password = passTag.value;
     console.log("pass : ", password);
 
-    let data = {
+    let datas = {
         id,
         name,
         email,
         password,
     }
 
-    let jsonData = JSON.stringify(data);
+    let jsonData = JSON.stringify(datas);
     console.log("jsonData : ", jsonData);
 
     let response = await fetch('/deleteData', {

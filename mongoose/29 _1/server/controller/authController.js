@@ -4,6 +4,7 @@ let user = require('../db/models/users');
 let jwt = require('jsonwebtoken');
 let dotenv = require('dotenv');
 dotenv.config();
+let bcrypt = require('bcrypt')
 
 exports.login = async function (req,res){
     try {
@@ -40,7 +41,9 @@ exports.login = async function (req,res){
             let db_password = user.password;
             console.log("db_password : ",db_password);
 
-            if(password === db_password){
+            bcrypt.compare(password, db_password,(err,auth) =>{
+
+            if(auth === true ){
                 //openssl genpkey - algorithm RSA -outprivate_key.pem -aes256
                 let access_token = jwt.sign({user_id : user.user_id},process.env.
                     PRIVATE_KEY,{expiresIn : "1d"});
@@ -53,8 +56,9 @@ exports.login = async function (req,res){
                     });
                     res.status(response.statusCode).send(response);
                     return;
-            }
-            else{
+            } 
+      
+          else{
                 let response = error_function({
                     statusCode : 404,
                     meassage : "Invalid password",
@@ -64,6 +68,7 @@ exports.login = async function (req,res){
                 res.status(response.statusCode).send(response);
                 return;
             }
+        })
         }  else{
             let response = error_function({
                 statusCode : 404,

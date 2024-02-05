@@ -28,11 +28,14 @@ async function submitForm() {
     }
 
 
+    //get jwt token from localstorage
 
-    let response = await fetch('http://192.168.150.131/submit', {
+
+    let response = await fetch('http://localhost:5001/users', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
+            "authorization" : `Bearer ${token}`,
 
         },
         body: json_data,
@@ -287,4 +290,44 @@ function validatePassword() {
     }
 
 
+}
+
+async function login(){
+    let email = document.getElementById('login_email').value;
+    let password = document.getElementById('login_password').value;
+
+    let datas = {
+        email,
+        password,
+    }
+    let json_Data = JSON.stringify(datas);
+    
+    let response = await fetch('http://localhost:5001/login',{
+        method : "POST",
+        headers : {
+            "Content-Type" : "application/json",
+        },
+        body : json_Data,
+        
+    });
+
+    let parsed_response = await response.json();
+    console.log("parsed_response :",parsed_response);
+
+    if(parsed_response.success){
+        console.log("Reached here");
+
+        let token = parsed_response.data;
+        console.log("token :",token);
+
+        alert(parsed_response.message);
+
+        localStorage.setItem('token',token);
+        window.location.href = "get_user.html";
+        return;
+    }
+    else{
+        alert(parsed_response.message);
+        return;
+    }
 }

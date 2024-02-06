@@ -2,6 +2,7 @@ const users = require('../db/models/users');
 const  sucess_function  = require('../utils/response-handler').sucess_function;
 const  error_function= require('../utils/response-handler').error_function;
 const bcrypt = require('bcrypt');
+const checkLogin = require('../utils/checkLogin').checkLogin_function;
 async function createUser(req, res) {
     try {
         const datas = req.body
@@ -82,6 +83,28 @@ async function createUser(req, res) {
 
 }
 
+const User = require('./models/User'); 
+const checkLogin = require('./checkLogin');
+
+const getData = (req, res) => {
+    // You can access userId from req object
+    const userId = req.userId;
+
+    // Example usage: Fetch user data
+    User.findById(userId, (err, user) => {
+        if (err || !user) {
+            return res.status(404).json({ message: 'User not found' });
+        } else {
+            // User found, perform desired actions
+            res.json({ user });
+        }
+    });
+};
+
+module.exports = {
+    getData
+};
+
 async function getUserData(req,res) {
     try {
         const datas = req.body;
@@ -94,6 +117,9 @@ async function getUserData(req,res) {
 
 }
 
+
+
+
 async function updateUser() {
 
 }
@@ -102,9 +128,12 @@ async function deleteUser() {
 
 }
 
+
+
 module.exports = {
     createUser,
     getUserData,
     updateUser,
     deleteUser,
 }
+

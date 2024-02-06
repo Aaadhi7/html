@@ -31,11 +31,11 @@ async function submitForm() {
     //get jwt token from localstorage
 
 
-    let response = await fetch('http://localhost:5001/users', {
+    let response = await fetch('/users', {
         method: "POST",
-        headers: {
+        header: {
             "Content-Type": "application/json",
-            "authorization" : `Bearer ${token}`,
+            "authorization" : `Bearer ${token}`, //(pass bearer token in hearders for autherization) 
 
         },
         body: json_data,
@@ -67,7 +67,7 @@ async function getData() {
     console.log("data:", datas)
 
 
-    let parsedData = await data.json();
+    let parsedData = await datas.json();
     console.log("parsedData : ", parsedData);
 
     let content = document.getElementById("content");
@@ -140,7 +140,7 @@ async function handleSave(id) {
 
     let response = await fetch('/editData', {
         method: "PUT",
-        headers: {
+        header: {
             "Content-type": "application/json"
         },
         body: jsonData,
@@ -190,7 +190,7 @@ async function handleDelete(id) {
 
     let response = await fetch('/deleteData', {
         method: "DELETE",
-        headers: {
+        header: {
             "Content-type": "application/json"
         },
         body: jsonData,
@@ -302,9 +302,9 @@ async function login(){
     }
     let json_Data = JSON.stringify(datas);
     
-    let response = await fetch('http://localhost:5001/login',{
+    let response = await fetch('/login',{
         method : "POST",
-        headers : {
+        header : {
             "Content-Type" : "application/json",
         },
         body : json_Data,

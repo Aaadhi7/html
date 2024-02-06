@@ -46,7 +46,7 @@ exports.login = async function (req,res){
             if(auth === true ){
                 //openssl genpkey - algorithm RSA -outprivate_key.pem -aes256
                 let access_token = jwt.sign({user_id : user.user_id},process.env.
-                    PRIVATE_KEY,{expiresIn : "1d"});
+                    PRIVATE_KEY,{expiresIn : "id"});
                     console.log("access_token : ",access_token);
 
                     let response = sucess_function({
@@ -93,3 +93,4 @@ exports.login = async function (req,res){
         
     }
 }
+

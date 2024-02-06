@@ -1,0 +1,19 @@
+ "authorization" : `Bearer ${token}`, //(pass bearer token in hearders for autherization) 
+ 1.pass token in req hearders
+ 2. create a file checkLogin.js
+ 3. create a middleware function and export it in checkLogin
+ 4.import or require this function in controller files
+
+  router.get('/user' , checkLogin,userContoller.getData);
+
+
+  Check checkLogin
+
+  1. get JWT token from req hearders
+  2. valid the token(!token,undefined,null)
+  3. decode the JWT token using private key
+  4. take user_id from decoded token
+  4. find user with this user_id
+  6. if user found, next()
+  7. if user found , write user_id to req, the call next()
+     else if user not found , error response

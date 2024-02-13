@@ -17,9 +17,11 @@ const authRoutes = require('./routes/authRoutes')
 app.use(express.json());
 app.use(express.urlencoded({extended : false}));
 app.use(userRoutes);
-app.use(authRoutes)
+app.use(authRoutes);
+app.use(express.json())
 //Database connection
 connect();
 app.listen(process.env.PORT, () => {
     console.log(`Server listening at http://localhost:${process.env.PORT}`);
 });
+

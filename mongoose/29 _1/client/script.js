@@ -1,5 +1,3 @@
-
-
 async function submitForm() {
 
     const name = document.getElementById('name').value
@@ -13,12 +11,18 @@ async function submitForm() {
     const password = document.getElementById('password').value
     console.log("password:", password);
 
-    let datas = {
+    let data = {
         name,
         email,
         password,
     }
-    let json_data = JSON.stringify(datas);
+    let json_data = JSON.stringify(data);
+
+    //get jwt token from localstorage
+    let token = localStorage.getItem('token');
+    console.log("token : ",token);
+
+
 
 
 
@@ -28,28 +32,26 @@ async function submitForm() {
     }
 
 
-    //get jwt token from localstorage
 
-
-    let response = await fetch('/users', {
+    let response = await fetch('http://localhost:5000/submit', {
         method: "POST",
-        header: {
+        headers: {
             "Content-Type": "application/json",
-            "authorization" : `Bearer ${token}`, //(pass bearer token in hearders for autherization) 
+            "authorization" : `Bearer ${token}`
 
         },
         body: json_data,
     });
 
-    let parsed_response = await response.text();
+    let parsed_response = await response.json();
     console.log("parsed_response:", parsed_response);
 
 
-    if (parsed_response === "success") {
+    if (parsed_response.success === "success") {
         alert('form submitted successfully');
         return;
     } else {
-        alert('form submitted failed');
+        alert(parsed_response.message);
         return;
     }
 
@@ -61,13 +63,9 @@ async function submitForm() {
 
 async function getData() {
 
-
-
-    let datas = await fetch('/getData');
-    console.log("data:", datas)
-
-
-    let parsedData = await datas.json();
+    let data = await fetch('http://localhost:5000/getData');
+    console.log("data:", data)
+    let parsedData = await data.json();
     console.log("parsedData : ", parsedData);
 
     let content = document.getElementById("content");
@@ -128,19 +126,19 @@ async function handleSave(id) {
     let password = passTag.value;
     console.log("pass : ", password);
 
-    let datas = {
+    let data = {
         id,
         name,
         email,
         password,
+    
     }
-
-    let jsonData = JSON.stringify(datas);
+    let jsonData = JSON.stringify(data);
     console.log("jsonData : ", jsonData);
 
-    let response = await fetch('/editData', {
+    let response = await fetch('http://localhost:5000/editData', {
         method: "PUT",
-        header: {
+        headers: {
             "Content-type": "application/json"
         },
         body: jsonData,
@@ -148,7 +146,7 @@ async function handleSave(id) {
     });
 
     console.log("response : ", response);
-    let parsed_response = await response.text();
+    let parsed_response = await response.json();
 
     if (parsed_response == "success") {
         alert("Updation success")
@@ -178,19 +176,19 @@ async function handleDelete(id) {
     let password = passTag.value;
     console.log("pass : ", password);
 
-    let datas = {
+    let data = {
         id,
         name,
         email,
         password,
     }
 
-    let jsonData = JSON.stringify(datas);
+    let jsonData = JSON.stringify(data);
     console.log("jsonData : ", jsonData);
 
-    let response = await fetch('/deleteData', {
+    let response = await fetch('http://localhost:5000/deleteData', {
         method: "DELETE",
-        header: {
+        headers: {
             "Content-type": "application/json"
         },
         body: jsonData,
@@ -275,7 +273,7 @@ function validatePassword() {
 
     const password_error = document.getElementById(`password-error`);
 
-    const password_regex =/^[a-zA-Z0-9!@#$%^&*]{6,16}$/;;
+    const password_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
     let passwordvalid = password_regex.test(password);
     console.log("passwordvalid:", passwordvalid);
@@ -292,42 +290,43 @@ function validatePassword() {
 
 }
 
-async function login(){
-    let email = document.getElementById('login_email').value;
-    let password = document.getElementById('login_password').value;
+async function login() {
 
+    let email = document.getElementById('login_email').value;
+    
+    let password=document.getElementById('login_password').value;
+    
     let datas = {
         email,
         password,
     }
-    let json_Data = JSON.stringify(datas);
     
-    let response = await fetch('/login',{
-        method : "POST",
-        header : {
-            "Content-Type" : "application/json",
+    let json_datas = JSON.stringify(datas);
+    
+    let response = await fetch('http://localhost:3000/login' ,{
+        method: "GET" ,
+        headers: { 
+        "Content-Type": "application/json",
         },
-        body : json_Data,
-        
+        body: json_datas,
     });
-
-    let parsed_response = await response.json();
-    console.log("parsed_response :",parsed_response);
-
-    if(parsed_response.success){
+    
+    let parsed_response = await response.json(); console.log("parsed_response", parsed_response);
+    
+    if (parsed_response.success) { 
         console.log("Reached here");
-
-        let token = parsed_response.data;
-        console.log("token :",token);
-
+        let token = parsed_response.data; 
+        console.log("token", token);
+        
         alert(parsed_response.message);
-
-        localStorage.setItem('token',token);
+        
+        localStorage.setItem('token', token); 
         window.location.href = "get_user.html";
-        return;
-    }
-    else{
-        alert(parsed_response.message);
-        return;
+    
+    return;
+    
+    }else {
+         alert(parsed_response.message); 
+         return;
     }
 }
